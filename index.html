@@ -1,0 +1,139 @@
+<!-- Modification of Week 3 Assignment cookie recipe page for responsiveness and to apply modern csss layout with flexbox and grid -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Velvet White Chocolate Chip Cookies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header (Using Flexbox) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span>Red Velvet White Chocolate Chip Cookies</span>
+                </div>
+                <p class="tagline">Soft, chewy, and irresistibly delicious cookies with a beautiful red hue</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation (Using Flexbox) -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="#recipe"><i class="fas fa-utensils"></i> Jump to Recipe</a></li>
+                <li><a href="#tips"><i class="fas fa-lightbulb"></i> Baking Tips</a></li>
+                <li><a href="#" class="print-btn"><i class="fas fa-print"></i> Print Recipe</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Main Content (Using CSS Grid) -->
+        <div class="main-grid">
+            <!-- Hero Section -->
+            <section class="hero">
+                <img src="./images/cookies.jpg" alt="Red Velvet White Chocolate Chip Cookies" class="hero-image">
+            </section>
+           
+            <!-- Recipe Section -->
+            <section id="recipe" class="recipe-section">
+                <h2 class="section-title">Red Velvet White Chocolate Chip Cookies</h2>
+                
+                <div class="recipe-meta">
+                    <div class="meta-item">
+                        <h3><i class="fas fa-clock"></i> Prep Time</h3>
+                        <p>15 minutes</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3><i class="fas fa-fire"></i> Cook Time</h3>
+                        <p>10 minutes</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3><i class="fas fa-hourglass-half"></i> Total Time</h3>
+                        <p>25 minutes</p>
+                    </div>
+                    <div class="meta-item">
+                        <h3><i class="fas fa-cookie"></i> Servings</h3>
+                        <p>24 cookies</p>
+                    </div>
+                </div>
+
+                <div class="ingredients-instructions">
+                    <div class="ingredients">
+                        <h3><i class="fas fa-list"></i> Ingredients</h3>
+                        <ul>
+                            <li>2 ¼ cups all-purpose flour</li>
+                            <li>¼ cup cocoa powder</li>
+                            <li>1 tsp baking soda</li>
+                            <li>½ tsp salt</li>
+                            <li>1 cup unsalted butter, softened</li>
+                            <li>¾ cup granulated sugar</li>
+                            <li>¾ cup brown sugar, packed</li>
+                            <li>2 large eggs</li>
+                            <li>1 tbsp red food coloring</li>
+                            <li>2 tsp vanilla extract</li>
+                            <li>1 ½ cups white chocolate chips</li>
+                        </ul>
+                    </div>
+
+                    <div class="instructions">
+                        <h3><i class="fas fa-mortar-pestle"></i> Instructions</h3>
+                        <ol>
+                            <li>Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.</li>
+                            <li>In a medium bowl, whisk together flour, cocoa powder, baking soda, and salt.</li>
+                            <li>In a large bowl, cream together the butter, granulated sugar, and brown sugar until light and fluffy.</li>
+                            <li>Beat in eggs one at a time, then mix in red food coloring and vanilla extract.</li>
+                            <li>Gradually blend in the flour mixture until just combined.</li>
+                            <li>Stir in the white chocolate chips.</li>
+                            <li>Drop rounded tablespoons of dough onto the prepared baking sheets, spacing about 2 inches apart.</li>
+                            <li>Bake for 9-11 minutes, or until edges are set but centers are still soft.</li>
+                            <li>Allow cookies to cool on baking sheet for 5 minutes before transferring to wire racks to cool completely.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips Section -->
+            <section id="tips" class="tips-section">
+                <h2 class="section-title">Common Cookie Baking Mistakes to Avoid</h2>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3><i class="fas fa-times-circle"></i> Overmixing the Dough</h3>
+                        <p>Overmixing develops too much gluten, resulting in tough cookies. Mix just until ingredients are combined.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3><i class="fas fa-balance-scale"></i> Not Measuring Properly</h3>
+                        <p>Baking is a science. Use proper measuring cups (spoon and level for dry ingredients) for consistent results.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3><i class="fas fa-thermometer-full"></i> Overbaking</h3>
+                        <p>Cookies continue to cook on the hot baking sheet after removal from oven. Remove when edges are set but centers look slightly underdone.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3><i class="fas fa-temperature-high"></i> Using Warm Butter</h3>
+                        <p>Butter should be softened but still cool to the touch. Too-soft butter causes cookies to spread too much.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer (Using Flexbox) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Jonte Fresh's Delicious Recipes | Red Velvet White Chocolate Chip Cookies</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

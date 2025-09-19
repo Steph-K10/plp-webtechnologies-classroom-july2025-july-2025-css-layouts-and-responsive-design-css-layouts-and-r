@@ -1,0 +1,340 @@
+/* modified css from week 3. Header and navigation use flexbox, the main content styled using grid */
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #A52A2A;
+    --secondary: #D8BFAA;
+    --accent: #FFD700;
+    --light: #FFF5EE;
+    --dark: #3C2F2F;
+    --text: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+    padding-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles (Using Flexbox) */
+header {
+    background-color: #a52a2a;
+    color: white;
+    padding: 40px 0;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    color: var(--accent);
+}
+
+.tagline {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Navigation (Using Flexbox) */
+nav {
+    background-color: #d8bfaa;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; 
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 1.5 rem;
+    list-style: none;
+    margin: 0 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.print-btn {
+    background-color: #a52a2a;
+    color: white !important;
+}
+
+.print-btn:hover {
+   background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Main Content Layout (Using CSS Grid) */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 300px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Recipe Section (Using Grid) */
+.recipe-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.recipe-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.meta-item {
+    background-color: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.meta-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Ingredients & Instructions (Using Grid) */
+.ingredients-instructions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.ingredients, .instructions {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.ingredients h3, .instructions h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ingredients ul, .instructions ol {
+    margin-left: 1.5rem;
+}
+
+.ingredients li, .instructions li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tips Section (Using Grid) */
+.tips-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.tip-card {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
+
+.tip-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer (Using Flexbox) */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .recipe-meta {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .ingredients-instructions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .hero {
+        grid-column: 1 / -1;
+        height: 400px;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-card {
+        padding: 1.5rem;
+    }
+    
+    .intro-title {
+        font-size: 1.5rem;
+    }
+    
+    .intro-description {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-links {
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav, .print-btn, footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        background: white;
+        color: black;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .recipe-section, .tips-section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
